@@ -16,5 +16,5 @@ jobs:
 
       - name: Run tests
         run: |
-          echo "${{ toJson(github.event.commits) }}"
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
           echo "Test"
