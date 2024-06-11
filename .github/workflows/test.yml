@@ -1,0 +1,20 @@
+name: Test Job
+
+on:
+  push:
+    paths:
+      - path1/**
+      - path2/**
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          echo "${{ toJson(github.event.commits) }}"
+          echo "Test"
