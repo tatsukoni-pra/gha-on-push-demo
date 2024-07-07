@@ -29,3 +29,7 @@ jobs:
       - name: Run tests 2
         run: |
           echo ${{ needs.test-job-1.outputs.TEST_1_VALUE }}
+
+      - name: Fail the job
+        run: |
+          exit 1
