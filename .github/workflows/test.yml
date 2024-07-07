@@ -13,6 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: sleep 10 seconds
+        run: |
+          sleep 10
+
       - name: Run tests 1
         id: test-1
         run: |
